@@ -1,0 +1,27 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Poppins:300,400,500,600,700);
+
+// Variables
+@import "variables";
+
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/normalize.css/normalize";
+
+
+html,
+body,
+#app {
+  height: $height;
+  width: $width;
+  overflow: hidden;
+}
+
+body {
+  padding: 0 2px;
+}
+
+body,
+#app {
+  width: $width + 13px;
+}

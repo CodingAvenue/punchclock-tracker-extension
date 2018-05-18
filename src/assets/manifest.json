@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Punch Clock Tracker",
+  "description": "Punch Clock Tracker by Coding Avenue",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_icon": "images/ca32.png",
+    "default_title": "Punch Clock Tracker by Coding Avenue",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/ca32.png",
+    "48": "images/ca32.png",
+    "128": "images/ca32.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/contentscript.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["notifications", "*://*.codingavenue.com/*"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
