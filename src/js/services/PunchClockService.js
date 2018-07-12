@@ -23,7 +23,7 @@ export default class extends Service {
 
                     let minutes = 0;
 
-                    $(data).find('table').find('tr > td:nth-child(3)').each(function () {
+                    $(data).find('table').find('tr > td:nth-child(4)').each(function () {
             
                         let time = $(this).text().trim().split(':');
             

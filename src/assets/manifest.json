@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Punch Clock Tracker",
   "description": "Punch Clock Tracker by Coding Avenue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "browser_action": {
     "default_icon": "images/ca32.png",
     "default_title": "Punch Clock Tracker by Coding Avenue",
