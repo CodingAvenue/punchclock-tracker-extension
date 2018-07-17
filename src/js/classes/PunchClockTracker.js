@@ -6,6 +6,12 @@ import Settings from "./Settings";
 let currentDate = null;
 let quotaAlert = null;
 let alertEnabled = true;
+let audio = new Audio('sound.mp3');
+let audioPlaying = false;
+
+audio.onended = function() {
+    audioPlaying = false;
+};
 
 export default class PunchClockTracker {
 
@@ -88,8 +94,9 @@ export default class PunchClockTracker {
 
 
     static alert() {
-        if (Settings.get('alarmSound')) {
-            (new Audio('sound.mp3')).play();
+        if (Settings.get('alarmSound') && !audioPlaying) {
+            audioPlaying = true;
+            audio.play();
         }
 
         quotaAlert.create();
